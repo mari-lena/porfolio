@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="slyles.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon-16x16.png">
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><img src="images/logo.jpg.jpg"></li>
+            <li>
+                <h1>project</h1>
+            </li>
+
+            <li class="nav"><a href="index.html">Home</a></li>
+            <li class="nav"><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li class="nav"><a href="about.html">About</a></li>
+        </ul>
+    </header>
+    <h1 class="portfolio">Portfolio</h1>
+    <p class="paragrafos">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+        ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+        tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequaLorem ipsum dolor sit amet,
+        consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+        ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+        tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequa
+    </p>
+
+    <h1 class="gallery-h1"> Gallery</h1>
+    <div class="gallery">
+        <img class="Img" src="images/e1.jpg" />
+        <img class="Img" src="images/e2.jpg" />
+        <img class="Img" src="images/e3.webp" />
+        <img class="Img" src="images/e4.jpg" />
+        <img class="Img" src="images/e5.jpg" />
+        <img class="Img" src="images/e5.webp" />
+    </div>
+    <div class="modal">
+        <span class="close"> x </span>
+        <img class="modalImage" id="img01" />
+    </div>
+    <script>
+        var modalEle = document.querySelector(".modal");
+        var modalImage = document.querySelector(".modalImage");
+        Array.from(document.querySelectorAll(".Img")).forEach(item => {
+            item.addEventListener("click", event => {
+                modalEle.style.display = "block";
+                modalImage.src = event.target.src;
+            });
+        });
+        document.querySelector(".close").addEventListener("click", () => {
+            modalEle.style.display = "none";
+        });
+    </script>
+    </header>
+    <div class="footer">
+        <P>Email:...@gmail.com
+            <a href="http://www.google.gr">google-search</a>
+        </P>
+
+    </div>
+
+</body>
+
+</html>
